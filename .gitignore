@@ -43,3 +43,5 @@ bin/
 
 ### Aviation Template Discord Bot ###
 config.toml
+
+.idea/

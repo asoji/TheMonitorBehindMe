@@ -18,12 +18,14 @@ dependencies {
     implementation(kotlin("reflect"))
     implementation(libs.bundles.exposed)
     implementation(libs.bundles.jda)
-    implementation(libs.bundles.ktor)
     implementation(libs.bundles.ktoml)
     implementation(libs.bundles.kotlinx)
     implementation(libs.bundles.logback)
+    implementation(libs.gson)
+    implementation(libs.java.websocket)
     implementation(libs.kotlin.logging)
     implementation(libs.reflections)
+    implementation(libs.okhttp)
     testImplementation(kotlin("test"))
 }
 
@@ -36,7 +38,7 @@ kotlin {
 }
 
 application {
-    mainClass.set("gay.asoji.aviationtemplate.Main")
+    mainClass.set("gay.asoji.themonitorbehindme.TheMonitorBehindMeKt")
 }
 
 ktor {

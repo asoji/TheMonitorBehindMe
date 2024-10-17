@@ -1,18 +1,16 @@
-package gay.asoji.aviationtemplate
+package gay.asoji.themonitorbehindme
 
-import com.akuleshov7.ktoml.Toml
 import com.akuleshov7.ktoml.file.TomlFileReader
-import gay.asoji.aviationtemplate.data.AviationTemplateBotConfig
+import gay.asoji.themonitorbehindme.data.TheMonitorBehindMeBotConfig
 import kotlinx.serialization.serializer
-import java.io.File
 import kotlin.system.exitProcess
 
 object Config {
-    private val configPath = System.getProperty("aviationtemplate_config", "config.toml")
+    private val configPath = System.getProperty("themonitorbehindme_config", "config.toml")
 
-    fun loadConfig(): AviationTemplateBotConfig {
+    fun loadConfig(): TheMonitorBehindMeBotConfig {
         return try {
-            logger.info { "Loading aviation template config..." }
+            logger.info { "Loading the monitor behind me config..." }
             TomlFileReader.decodeFromFile(serializer(), configPath)
         } catch (e: Exception) {
             logger.error {
